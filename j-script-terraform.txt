@@ -4,21 +4,24 @@ tools {
   terraform 'terraform-windows-local'
 }
 stages {
-stage(‘Checkout’) {
-steps {
-checkout([$class: ‘GitSCM’, branches: [[name: ‘*/main’]], extensions: [], userRemoteConfigs: [[url: ‘https://github.com/suraj11198/Terraform-Blog.git‘]]])
-}
-}
-stage ('terraform init') {
+    stage ('Git Clone')
+	{
+	steps
+	{
+	checkout([$class: 'GitSCM', branches: [[name: '*/Terraform-poc']], extensions: [], userRemoteConfigs: [[credentialsId: 'a59fb8af-d1b1-4a79-b2f2-b2a0ae5400c9', url: 'https://github.com/sarmisha1998/java-maven-junit-helloworld.git']]])
+	}
+	}
+/*stage ('terraform init') {
 steps {
 bat 'terraform fmt'
 bat 'terraform init'
-bat 'terraform plan –auto-approve'
+bat 'terraform plan'
 }
-}
+}*/
 stage ('terraform Action') {
 steps {
-bat 'terraform apply --auto-approve'
+//bat 'terraform apply --auto-approve'
+bat 'terraform destroy --auto-approve'
 }
 }
 }
