@@ -1,0 +1,36 @@
+variable "linux_vm_image_publisher" {
+  type        = string
+  description = "Virtual machine source image publisher"
+}
+variable "linux_vm_image_offer" {
+  type        = string
+  description = "Virtual machine source image offer"
+}
+variable "linux_vm_image_offer_20" {
+  type        = string
+  description = "Virtual machine source image offer"
+}
+variable "ubuntu_1604_sku" {
+  type        = string
+  description = "SKU for Ubuntu 16.04 LTS"
+}
+variable "ubuntu_1604_gen2_sku" {
+  type        = string
+  description = "SKU for Ubuntu 16.04 LTS Gen2"
+}
+variable "ubuntu_1804_sku" {
+  type        = string
+  description = "SKU for Ubuntu 18.04 LTS"
+}
+variable "ubuntu_1804_gen2_sku" {
+  type        = string
+  description = "SKU for Ubuntu 18.04 LTS Gen2"
+}
+variable "ubuntu_2004_sku" {
+  type        = string
+  description = "SKU for Ubuntu 20.04 LTS"
+}
+variable "ubuntu_2004_gen2_sku" {
+  type        = string
+  description = "SKU for Ubuntu 20.04 LTS Gen2"
+}
